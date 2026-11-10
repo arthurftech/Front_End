@@ -26,7 +26,7 @@ const Header = () => {
     }
     & nav {
       padding: 0 45px;
-      border-bottom: 1px solid #f5f5f5;
+      border-bottom: 1px solid var(--ligth-gray-3);
     }
 
     & nav ul {
@@ -40,16 +40,18 @@ const Header = () => {
 
     & nav a {
       text-decoration: none;
-      color: #666666;
+      color: var(--dark-gray-3);
       font-size: 1rem;
       font-weight: 450;
-      border-bottom: 0.5px solid transparent;
       transition: border-color 0.3s ease;
       &:hover {
-        color: #ee4266;
+        color: var(--error);
         padding-bottom: 5px;
-        border-bottom: 0.5px solid #ee4266;
+        border-bottom: 0.5px solid var(--error);
       }
+    }
+    & div img {
+      cursor: pointer;
     }
   `;
   return (
@@ -61,14 +63,14 @@ const Header = () => {
             <InputIcon className="pi pi-search" />
             <InputText
               className="w-full p-2"
-              style={{ backgroundColor: "#f1f1f1" }}
+              style={{ backgroundColor: "var(--ligth-gray-3)" }}
             />
           </IconField>
         </div>
         <a href="/">
           <h5>Cadastre-se</h5>
         </a>
-        <Button style={{ backgroundColor: "#C92071" }} className="px-5">
+        <Button style={{ backgroundColor: "var(--primary)" }} className="px-5">
           Entrar
         </Button>
         <div>
